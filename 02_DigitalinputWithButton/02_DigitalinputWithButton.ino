@@ -25,6 +25,10 @@
     GPIO5           | Pushbutton signal pin (with 10kΩ pull-down to GND)
 */
 
+
+
+// a) Reading a push button.
+
 const byte LED_GPIO = 4;       // output LED pin
 const byte BUTTON_GPIO = 5;    // input button pin
 
@@ -32,8 +36,6 @@ int buttonState = 0;
 
 void setup() {
   pinMode(LED_GPIO, OUTPUT);
-
-  // Use INPUT_PULLDOWN if external pull-down is not used
   pinMode(BUTTON_GPIO, INPUT_PULLDOWN);
 }
 
