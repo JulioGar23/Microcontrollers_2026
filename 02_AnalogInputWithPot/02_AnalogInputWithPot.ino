@@ -22,9 +22,6 @@
     3.3V            | Pot pin 3
     GPIO4           | LED anode via resistor
     GND             | LED cathode
-
-    Author: Peter Dalmaris
-    Updated: July 2025 for ESP32-S3
 */
 
 const byte POT_GPIO = 5;   // ADC1_CH4
