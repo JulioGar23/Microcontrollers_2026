@@ -16,7 +16,7 @@
  *                    │                     │     │
  *                    │                GPIO4├─────┼─────── Touch Wire
  *                    │                     │     │
- *                    │               GPIO38├─────┼─────── RGB LED (onboard)
+ *                    │               GPIO48├─────┼─────── RGB LED (onboard)
  *                    │                     │     │
  *                    │                 GND├─────┴─────── LED Cathode & GND
  *                    │                     │
@@ -31,7 +31,6 @@
  *                                          330Ω
  * 
  */
-
 // ================================================================================
 // CONFIGURATION CONSTANTS
 // ================================================================================
@@ -48,7 +47,7 @@ const uint16_t DEBOUNCE_DELAY_MS = 50;     // Debounce delay in milliseconds
 const uint16_t SERIAL_UPDATE_MS = 500;     // Serial output update interval
 
 // RGB LED Configuration (for WS2812)
-const uint8_t LED_BRIGHTNESS = 50;         // RGB LED brightness (0-255)
+const uint8_t LED_BRIGHTNESS = 20;         // RGB LED brightness (0-255)
 
 // ================================================================================
 // GLOBAL VARIABLES
@@ -223,7 +222,7 @@ void updateRGBLED() {
         // Simple RGB control - set to blue when on
         // Note: This is a basic implementation. For full WS2812 control,
         // consider using libraries like FastLED or Adafruit NeoPixel
-        neopixelWrite(RGB_LED_PIN, 0, 0, LED_BRIGHTNESS); 
+        neopixelWrite(RGB_LED_PIN, LED_BRIGHTNESS, 0, 0); 
     } else {
         neopixelWrite(RGB_LED_PIN, 0, 0, 0); //
     }
