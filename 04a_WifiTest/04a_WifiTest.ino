@@ -16,10 +16,10 @@ void setup() {
   const char* ssid     = "IZZI-9EB9";                        // Wifi
   const char* password = "F0AF85519EB9";                     // Password
   
-  Serial.println("Star Wifi Conectivity");
+  Serial.println("Start Wifi Conectivity");
   WiFi.disconnect();
   
-  Serial.print("Conected yo  ");
+  Serial.print("Connecting to  ");
   Serial.println(ssid);
   
   WiFi.mode(WIFI_STA);
@@ -45,5 +45,5 @@ void loop() {
 
 void message()  
 {
-  server.send(200, "text/html", "<h2> This message is from the ESP32-S3. <br> 2026 MICROCONTROLLERS </h2>");
+  server.send(200, "text/html", "<h2> This message is from the ESP32-S3. <br> MARCH 2026 MICROCONTROLLERS ITCG-UDG  </h2>");
 }
